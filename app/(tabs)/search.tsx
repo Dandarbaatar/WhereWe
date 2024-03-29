@@ -5,7 +5,10 @@ import { View, StyleSheet, Text, ScrollView } from 'react-native';
 import { LongCards } from '../components/longCards';
 import { Search } from '../components/search';
 
+import Colors from '@/constants/Colors';
 import { STATUSBAR_HEIGHT } from '@/utils/statusbar-height';
+
+const image = require('../../assets/images/zurag.jpeg');
 
 export default function TabTwoScreen(): JSX.Element {
   return (
@@ -13,7 +16,7 @@ export default function TabTwoScreen(): JSX.Element {
       <View style={styles.header}>
         <View style={styles.headerLeft}>
           <Link href="../" style={styles.backLink}>
-            <Ionicons name="arrow-back" size={30} color="black" />
+            <Ionicons name="arrow-back" size={30} color={Colors.light.text} />
           </Link>
           <View style={styles.headerText}>
             <Text style={styles.text}>Хайх</Text>
@@ -24,16 +27,16 @@ export default function TabTwoScreen(): JSX.Element {
         </View>
       </View>
       <ScrollView>
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image} />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image} />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image} />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image} />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image} />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image} />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image} />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image} />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image} />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image} />
       </ScrollView>
     </View>
   );
@@ -41,7 +44,7 @@ export default function TabTwoScreen(): JSX.Element {
 
 const styles = StyleSheet.create({
   text: {
-    color: '#000',
+    color: Colors.light.text,
     fontSize: 25,
     fontWeight: '500',
   },
@@ -82,6 +85,6 @@ const styles = StyleSheet.create({
     paddingTop: STATUSBAR_HEIGHT,
     flex: 1,
     overflow: 'scroll',
-    backgroundColor: '#80BCBD',
+    backgroundColor: Colors.light.background,
   },
 });

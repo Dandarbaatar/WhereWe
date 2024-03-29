@@ -4,7 +4,13 @@ import { View, StyleSheet, Text, ScrollView } from 'react-native';
 
 import { LongCards } from '../components/longCards';
 
+import Colors from '@/constants/Colors';
 import { STATUSBAR_HEIGHT } from '@/utils/statusbar-height';
+
+const image1 = require('../../assets/images/zurag.jpeg');
+const image2 = require('../../assets/images/zurag1.jpeg');
+const image3 = require('../../assets/images/zurag2.jpeg');
+const image4 = require('../../assets/images/zurag3.jpeg');
 
 export default function Suggested(): JSX.Element {
   return (
@@ -12,24 +18,24 @@ export default function Suggested(): JSX.Element {
       <View style={styles.header}>
         <View style={styles.headerLeft}>
           <Link href="../" style={styles.backLink}>
-            <Ionicons name="arrow-back" size={30} color="black" />
+            <Ionicons name="arrow-back" size={30} color={Colors.light.text} />
           </Link>
           <View style={styles.headerText}>
-            <Text style={styles.text}>asd</Text>
+            <Text style={styles.text}>Хайчихуу?</Text>
           </View>
         </View>
       </View>
       <ScrollView>
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
-        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image1} />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image2} />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image3} />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image4} />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image2} />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image4} />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image1} />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image2} />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image4} />
+        <LongCards name="Монгол нохой чарга" location="Тэрэлж" price="100,000" image={image1} />
       </ScrollView>
     </View>
   );
@@ -37,7 +43,7 @@ export default function Suggested(): JSX.Element {
 
 const styles = StyleSheet.create({
   text: {
-    color: '#000',
+    color: Colors.light.text,
     fontSize: 25,
     fontWeight: '500',
   },
@@ -71,6 +77,6 @@ const styles = StyleSheet.create({
     paddingTop: STATUSBAR_HEIGHT,
     flex: 1,
     overflow: 'scroll',
-    backgroundColor: '#80BCBD',
+    backgroundColor: Colors.light.background,
   },
 });

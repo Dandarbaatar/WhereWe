@@ -1,13 +1,15 @@
 import { AntDesign, Entypo } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
 
+import Colors from '@/constants/Colors';
+
 const TabLayout: React.FC = () => {
   return (
     <Tabs
       screenOptions={{
-        tabBarInactiveTintColor: '#000',
-        tabBarActiveTintColor: '#666',
-        tabBarStyle: { backgroundColor: '#909090' },
+        tabBarInactiveTintColor: Colors.light.tabIconDefault,
+        tabBarActiveTintColor: Colors.light.tabIconSelected,
+        tabBarStyle: { backgroundColor: Colors.light.tint },
       }}>
       <Tabs.Screen
         name="index"

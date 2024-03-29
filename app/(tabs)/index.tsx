@@ -1,65 +1,77 @@
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { Image, ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import { TextStroke } from '../components/TextStroke';
 import { Cards } from '../components/cards';
 
-// import { Button } from '../components';
-import { STATUSBAR_HEIGHT } from '@/utils/statusbar-height';
+import Colors from '@/constants/Colors';
 
-const image1 = require('../../assets/images/AltaiTavanBogd.jpeg');
-// const homeHero = require('../../assets/images/AltaiTavanBogd.jpeg');
+// import { STATUSBAR_HEIGHT } from '@/utils/statusbar-height';
+const homeHero = require('../../assets/images/AltaiTavanBogd.jpeg');
 const logo = require('../../assets/images/Logo.png');
+const image1 = require('../../assets/images/zurag.jpeg');
+const image2 = require('../../assets/images/zurag1.jpeg');
+const image3 = require('../../assets/images/zurag2.jpeg');
+const image4 = require('../../assets/images/zurag3.jpeg');
 
 export default function TabOneScreen(): React.ReactNode {
   return (
     <ScrollView style={styles.container}>
-      <View style={styles.header}>
-        <Image source={logo} style={styles.logo} />
-        <TextStroke stroke={2} color="#000">
-          <Text style={styles.headerText}>Хайчихуу?</Text>
-        </TextStroke>
-      </View>
       <View style={styles.container}>
         {/* <Image source={homeHero} style={styles.imgBack} /> */}
-        {/* <ImageBackground
+        <ImageBackground
           source={homeHero}
           resizeMode="cover"
           style={styles.imgBack}
           imageStyle={{ borderRadius: 25 }}>
-          <Text>asd</Text>
-        </ImageBackground> */}
+          <LinearGradient
+            colors={['rgba(255,255,255,0)', 'rgba(0,0,0,0.6)']}
+            start={{ x: 0, y: 1 }}
+            end={{ x: 0, y: 0 }}
+            locations={[0, 0.6]}
+            style={{ flex: 1 }}>
+            <View style={styles.header}>
+              <Image source={logo} style={styles.logo} />
+              <Text style={styles.headerText}>Хайчихуу?</Text>
+            </View>
+          </LinearGradient>
+        </ImageBackground>
         <Cards
           name="Таньд санал болгох"
-          image1Text="hello"
           image1={image1}
-          image2={image1}
-          image3={image1}
-          image4={image1}
-          image2Text="lol"
-          image3Text="lol"
-          image4Text="ll"
-          link="/screens/suggested"
-          linkDetail="/screens/detail"
+          image2={image2}
+          image3={image3}
+          image4={image4}
+          name1="Монгол нохой морь чарга"
+          name2="Mongoljin tour"
+          name3="Их гүрэн"
+          name4="Их хаадын хүрээ"
         />
         <Cards
           name="Таньд санал болгох"
-          image1Text="hello"
           image1={image1}
-          image2={image1}
-          image3={image1}
-          image4={image1}
-          image2Text="lol"
-          image3Text="lol"
-          image4Text="ll"
-          link="/screens/suggested"
-          linkDetail="/screens/detail"
+          image2={image2}
+          image3={image3}
+          image4={image4}
+          name1="Эрдэнэ зуу"
+          name2="Эрдэнэ зуу"
+          name3="Эрдэнэ зуу"
+          name4="Эрдэнэ зуу"
         />
+      </View>
+      <View style={styles.footer}>
+        <View>
+          <Text>Footer</Text>
+        </View>
       </View>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  footer: {
+    width: '100%',
+    paddingHorizontal: 20,
+  },
   logo: {
     height: 70,
     width: 70,
@@ -75,20 +87,29 @@ const styles = StyleSheet.create({
   imgBack: {
     height: 300,
     width: '100%',
-    borderRadius: 25,
   },
   header: {
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 20,
-    // backgroundColor: '#909090',
-    height: 80,
+    height: 170,
+    // backgroundColor: 'rgba(0,0,0,0.5)',
+    // backgroundColor: 'black',
+    // marginTop: 50,
+    // shadowColor: '#000',
+    // shadowOffset: {
+    //   width: 0,
+    //   height: 12,
+    // },
+    // shadowOpacity: 0.58,
+    // shadowRadius: 16.0,
+    // elevation: 24,
   },
   container: {
     flex: 1,
     // alignItems: 'center',
-    paddingTop: STATUSBAR_HEIGHT,
-    backgroundColor: '#80BCBD',
+    // paddingTop: STATUSBAR_HEIGHT,
+    backgroundColor: Colors.light.background,
   },
 });

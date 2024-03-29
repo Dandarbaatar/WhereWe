@@ -1,5 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 
+import Colors from '@/constants/Colors';
+
 export default function TabTwoScreen(): React.ReactNode {
   return (
     <View style={styles.container}>
@@ -13,6 +15,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: Colors.light.background,
   },
   title: {
     fontSize: 20,
